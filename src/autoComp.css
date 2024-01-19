@@ -1,0 +1,81 @@
+.ACComp {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 160px;
+}
+.ACComp.disabled{
+  pointer-events: none;
+  background-color: #f2f2f2;
+  opacity: 0.7;
+  filter: grayscale(100%);
+}
+.ACComp #inputfield {
+  border-style: none;
+  outline-style: none;
+  border-bottom: 1px solid blue;
+  height: 20px;
+  width: 165px;
+}
+.ACComp ul#showfield {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  list-style-type: none;
+  list-style: none;
+  padding:2px;
+  position: absolute;
+  top: 10px;
+  height: auto;
+  min-height: 30px;
+  max-height: 110px;
+  overflow: auto;
+  background-color: aquamarine;
+  width: 160px;
+}
+.ACComp #showfield li {
+  justify-content: start;
+  padding: 2px;
+  list-style: none;
+  cursor: pointer;
+}
+.selected{
+  background-color: antiquewhite;
+}
+.buttonbox{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right:-10px;
+  width:50px;
+}
+.arrowbutton{
+  padding: 0;
+  margin: 0;
+  z-index: 1;
+  width: 25px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  border-style: none;
+  background-color: transparent;
+}
+.arrowbutton.selector{
+  transform: rotate(-180deg);
+}
+.buttonbox .canceltextbutton{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height:22px;
+  font-size: 10px;
+  cursor: pointer;
+  visibility: hidden;
+}
+.buttonbox .canceltextbutton.active{
+  visibility: visible;
+}

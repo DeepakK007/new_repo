@@ -1,0 +1,22 @@
+button{
+    height: 1.5rem;
+    width: 4rem;
+    margin:10px;
+    display: block;
+    border-radius: 4px;
+    border-style: none;
+}
+button.text{
+    background-color: white;
+    border: 1px solid rgb(83, 83, 255);
+}
+button.elevated{
+    box-shadow:1px 2px 4px 1px hsl(0deg 0% 0% / 35%);
+}
+button:active{
+    box-shadow:0 0 0 0;
+    transition: box-shadow 0.3s;
+}
+a{
+    text-decoration: none;
+}
