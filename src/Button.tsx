@@ -3,10 +3,12 @@ import "./button.css";
 import ColorConstant from "./ColorConstant";
 import _isEqual from "lodash/isEqual";
 export default function Button(props: object) {
+  console.log("Button",props);
   const previousColor = useRef();
   const previousSx = useRef();
-  let { variant, color, sx, name, disableElevated, href, ...rest } = props;
+  let { variant, color, sx, name, disableElevated, href, children , ...rest } = props;
   const [definedStyle,setStyle] = useState(ColorConstant(color,sx));
+  console.log(props);
   useEffect(()=>{
       const isPreviousSx = !_isEqual(previousSx.current,sx);
       if(isPreviousSx || previousColor.current != color ){
@@ -40,7 +42,7 @@ export default function Button(props: object) {
         style={{...definedStyle}}
         {...rest}
       >
-        {name ? name : ""}
+        {children?children:""}
       </button>
     </>
   );

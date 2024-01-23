@@ -1,6 +1,7 @@
 import "./styles.css";
 import ACComp from "./AutocompleteComp.tsx";
 import Button from "./Button.tsx";
+import ButtonGroup from "./BUttonGroup.tsx";
 const List: String[] = [
   "New York",
   "Los Angeles",
@@ -29,12 +30,17 @@ export default function App(): any {
       <ACComp list={List} />
       <Button
         color={"secondary"}
-        name={"Deepak"}
         sx={{ height: "40px" }}
         onClick={() => {
           console.log("Clicked");
         }}
-      />
+        
+      > Deepak
+        </Button>
+      <ButtonGroup variant="primary">
+        <Button>1</Button>
+        <Button>2</Button>
+      </ButtonGroup>
     </div>
   );
 }
