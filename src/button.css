@@ -1,14 +1,30 @@
+html{
+    --main-bg-color: rgb(83, 83, 255);
+}
 button{
-    height: 1.5rem;
-    width: 4rem;
     margin:10px;
     display: block;
     border-radius: 4px;
     border-style: none;
 }
+.primary{
+    --main-bg-color: rgb(83, 83, 255);
+}
+.secondary{
+    --main-bg-color:rgb(255, 146, 58);
+}
 button.text{
-    background-color: white;
-    border: 1px solid rgb(83, 83, 255);
+    background-color: transparent;
+    color:var(--main-bg-color);
+    border: none;
+}
+button.contained{
+    background-color: var(--main-bg-color);
+    border: none;
+}
+button.outlined{
+    background-color: transparent;
+    border: 1px solid var(--main-bg-color);
 }
 button.elevated{
     box-shadow:1px 2px 4px 1px hsl(0deg 0% 0% / 35%);
@@ -19,4 +35,63 @@ button:active{
 }
 a{
     text-decoration: none;
+}
+
+.button-group{
+    display: flex;
+    width:fit-content;
+    border-radius: 5px;
+}
+.button-group.row{
+    flex-direction: row;
+}
+.button-group button{
+    margin:0;
+    border-radius: 0;
+}
+.button-group button.elevated{
+    box-shadow: 0px 3px 0px 0px hsl(0deg 0% 0% / 35%);
+}
+.button-group button:first-child{
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.button-group button:last-child{
+    -webkit-border-top-right-radius: 5px;
+    -webkit-border-bottom-right-radius: 5px;
+    -moz-border-radius-topright: 5px;
+    -moz-border-radius-bottomright: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.button-group.column{
+    flex-direction: column;
+}
+.button-group.column button{
+    border-bottom: 1px solid var(--main-bg-color);
+}
+.button-group.row button{
+    border-right: 1px solid var(--main-bg-color)
+}
+
+.button-group button.text:last-child{
+    margin:0;
+    border: none;
+}
+.small{
+    font-size: small;
+    padding: 5px;
+}
+.medium{
+    font-size: medium;
+    padding: 8px;
+}
+.large{
+    font-size: large;
+    padding: 12px;
 }

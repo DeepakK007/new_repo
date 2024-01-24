@@ -37,7 +37,9 @@ export default function App(): any {
         
       > Deepak
         </Button>
-      <ButtonGroup variant="primary">
+      <ButtonGroup variant="text" color = {"secondary"}  size="large" orientation="vertical">
+        <Button>1</Button>
+        <Button color={"primary"}>2</Button>
         <Button>1</Button>
         <Button>2</Button>
       </ButtonGroup>
